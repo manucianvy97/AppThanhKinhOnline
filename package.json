@@ -16,10 +16,12 @@
         "url": "https://github.com/moodlehq/moodlemobile2.git"
     },
     "license": "Apache-2.0",
-    "licenses": [{
-        "type": "Apache-2.0",
-        "url": "http://www.apache.org/licenses/LICENSE-2.0"
-    }],
+    "licenses": [
+        {
+            "type": "Apache-2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0"
+        }
+    ],
     "scripts": {
         "start": "ionic-app-scripts serve --address 0.0.0.0 --port 8100 --livereload-port 35729 --dev-logger-port 53703 --nobrowser",
         "setup": "npm install && npx cordova prepare && npx gulp",
@@ -80,7 +82,7 @@
         "chart.js": "^2.7.2",
         "com-darryncampbell-cordova-plugin-intent": "^1.1.7",
         "cordova": "8.1.2",
-        "cordova-android": "7.1.2",
+        "cordova-android": "^6.3.0",
         "cordova-android-support-gradle-release": "^3.0.0",
         "cordova-clipboard": "^1.2.1",
         "cordova-ios": "4.5.5",
@@ -141,8 +143,8 @@
     },
     "cordova": {
         "platforms": [
-            "android",
-            "ios"
+            "ios",
+            "android"
         ],
         "plugins": {
             "com-darryncampbell-cordova-plugin-intent": {},
@@ -200,13 +202,15 @@
         "directories": {
             "output": "desktop/dist"
         },
-        "protocols": [{
-            "name": "Moodle Mobile URL",
-            "schemes": [
-                "moodlemobile"
-            ],
-            "role": "Viewer"
-        }],
+        "protocols": [
+            {
+                "name": "Moodle Mobile URL",
+                "schemes": [
+                    "moodlemobile"
+                ],
+                "role": "Viewer"
+            }
+        ],
         "compression": "maximum",
         "electronVersion": "4.2.5",
         "mac": {
